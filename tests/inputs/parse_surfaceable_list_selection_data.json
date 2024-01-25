@@ -1,0 +1,10 @@
+{   
+    "_type": "surfaceable_list_selection",
+    "has_variables": "example_text",
+    "is_expired": "example_text",
+    "locked": "example_text",
+    "multiple": "example_text",
+    "prompt": "example_text",
+    "reviewable_message": "example_text",
+    "selectables": "example_text"
+}

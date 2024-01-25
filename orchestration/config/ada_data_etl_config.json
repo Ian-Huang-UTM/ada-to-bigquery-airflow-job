@@ -1,0 +1,11 @@
+{
+    "email_on_failure": {{ email_on_failure }},
+    "notification_email": "{{ notification_email }}",
+    "schedule_interval": "{{ schedule_interval }}",
+    "bq_project": "{{ bq_project }}",
+    "dataset": "{{ dataset }}",
+    "endpoint_url": "https://loblaws-og.ada.support/api",
+    "composer_service_account": "composer-{{ env }}-account@ds-services-{{ env }}.iam.gserviceaccount.com",
+    "ada_to_bq_sa_vault_key": "ada-to-bq-etl",
+    "vault_gcp_role": "datascience-reader-ds-services-{{ env }}"
+}

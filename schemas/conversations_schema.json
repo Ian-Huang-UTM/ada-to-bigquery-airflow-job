@@ -1,0 +1,166 @@
+[
+    {
+      "mode": "NULLABLE",
+      "name": "conversation_id",
+      "type": "STRING",
+      "description": "The conversations unique ID"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "date_created",
+      "type": "TIMESTAMP",
+      "description": "The timestamp for when the conversation was created"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "date_updated",
+      "type": "TIMESTAMP",
+      "description": "The timestamp for when the conversation was last updated"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "chatter_id",
+      "type": "STRING",
+      "description": "The unique chatter ID"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "platform",
+      "type": "STRING",
+      "description": "On which platform did the conversation take place"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "is_engaged",
+      "type": "BOOL",
+      "description": "Did the chatter send at least one message to start the conversation after a greeting was served by Ada"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "is_escalated",
+      "type": "BOOL",
+      "description": "Did the chatter handoff to an integrated CX platform, an email ticket, or otherwise escalate to an agent"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "csat",
+      "type": "STRING",
+      "description": "A JSON object converted to STRING. The associated CSAT score for the conversation"
+    },
+    {
+      "name": "metavariables",
+      "type": "RECORD",
+      "fields":
+        [
+          {
+            "mode": "NULLABLE",
+            "name": "browser",
+            "type": "STRING",
+            "description": "The type of browser used when accessing the chatbot"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "browser_version",
+            "type": "STRING",
+            "description": "The browser version"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "chattertoken",
+            "type": "STRING",
+            "description": "The token assigned to the chatter"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "created",
+            "type": "INTEGER",
+            "description": "The epoch unix time stamp of chat creation"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "device",
+            "type": "STRING",
+            "description": "The OS of the device"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "embed",
+            "type": "INTEGER",
+            "description": "?"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "followupresponseid",
+            "type": "STRING",
+            "description": "?"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "initialurl",
+            "type": "STRING",
+            "description": "The URL the user came from"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "introshown",
+            "type": "BOOL",
+            "description": "?"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "language",
+            "type": "STRING",
+            "description": "The language of the user"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "last_answer_id",
+            "type": "STRING",
+            "description": "The ID of the last answer sent by the bot"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "last_question_asked",
+            "type": "STRING",
+            "description": "The content of the last question asked by the user"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "user_agent",
+            "type": "STRING",
+            "description": "The User-Agent request header of the requesting user agent."
+          }
+        ]
+    },
+    {
+      "name": "variables",
+      "type": "RECORD",
+      "fields": 
+        [
+          {
+            "mode": "NULLABLE",
+            "name": "domain_name",
+            "type": "STRING",
+            "description": "The domain the user is coming from"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "lob",
+            "type": "STRING",
+            "description": "The line of business the user is coming from"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "order_number",
+            "type": "INTEGER",
+            "description": "The order number that the user is getting the chatbot's help with"
+          }
+        ]    },
+    {
+      "mode": "NULLABLE",
+      "name": "conversation_obj",
+      "type": "STRING",
+      "description": "A JSON object converted to STRING. The entire Conversation Object as a string"
+    }
+  ]
+  

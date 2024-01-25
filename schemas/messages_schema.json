@@ -1,0 +1,302 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "message_id",
+    "type": "STRING",
+    "description": "The message’s unique ID"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "date_created",
+    "type": "TIMESTAMP",
+    "description": "The timestamp for when the message was originally created"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "conversation_id",
+    "type": "STRING",
+    "description": "A reference to the conversation object to which the message belongs"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "message_type",
+    "type": "STRING",
+    "description": "The type of message being sent"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "text_data",
+    "type": "RECORD",
+    "description": "Shows text that is sent by the chatbot to the user. *",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "body",
+          "type": "STRING",
+          "description": "The text sent in the message"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_variables",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_forced_quick_replies",
+          "type": "BOOL",
+          "description": "?"
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "quick_replies_data",
+    "type": "RECORD",
+    "description": "Shows a list of suggested (common) questions that the user can select from.",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "quick_replies",
+          "type": "STRING",
+          "description": "A list of all suggested questions. TODO: Since this is returned as a list, change data type to record and parse fields of list."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_variables",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_forced",
+          "type": "BOOL",
+          "description": "?"
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "trigger_data",
+    "type": "RECORD",
+    "description": "The value of from the list of quick replies selected by the user. *",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "body",
+          "type": "STRING",
+          "description": "Text of clicked button"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "button_type",
+          "type": "STRING",
+          "description": "Button type of the quick options button that was clicked."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_chat_id",
+          "type": "STRING",
+          "description": "Chat from which the button press came."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "presence_data",
+    "type": "RECORD",
+    "description": "Almost always ends the conversation. *",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "body",
+          "type": "STRING",
+          "description": "Text of the response."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "event",
+          "type": "STRING",
+          "description": "The event type"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_variables",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "list_selection_data",
+    "type": "RECORD",
+    "description": "The selection made by the user",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "body",
+          "type": "STRING",
+          "description": "Text of the response."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "by",
+          "type": "STRING",
+          "description": "The id of the user that makes the selection *"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "created",
+          "type": "TIMESTAMP",
+          "description": "Time that the user made the selection, with a UTC timestamp"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "data",
+          "type": "STRING",
+          "description": "JSON object with the selected option data. Seems to only contain the 'selected' field."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_chat_id",
+          "type": "STRING",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "platform",
+          "type": "STRING",
+          "description": "Platform that the selection was made on"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "temp_message_uuid",
+          "type": "STRING",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "to",
+          "type": "STRING",
+          "description": "The id of the person the selection was sent to, almost always the bot."
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "surfaceable_list_selection_data",
+    "type": "RECORD",
+    "description": "A list of Loblaws services to get help with, displayed at the start * of the interaction.",
+    "fields":
+      [
+        {
+          "mode": "NULLABLE",
+          "name": "has_variables",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_expired",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "locked",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "multiple",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "prompt",
+          "type": "STRING",
+          "description": "The prompt for the list of selections. Seems to only come in the options here."
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "reviewable_message",
+          "type": "BOOL",
+          "description": "?"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "selectables",
+          "type": "STRING",
+          "description": "The list of selectable options to choose from. Seems to only come in the options here. TODO: convert to record and take in list of options"
+        }
+      ]
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sender",
+    "type": "STRING",
+    "description": "The sender of the message (A unique ID if it is a chatter, or “agent” or “bot” otherwise)"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "recipient",
+    "type": "STRING",
+    "description": "The recipient of the message (A unique ID if it is a chatter, or “agent” or “bot” otherwise)"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "review",
+    "type": "INT64",
+    "description": "Was the answer given a thumbs up or thumbs down?"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "answer_title",
+    "type": "STRING",
+    "description": "The title of the answer in the builder interface"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "message_obj",
+    "type": "STRING",
+    "description": "A JSON object converted to STRING. The entire Message Object as a string"
+  }
+]

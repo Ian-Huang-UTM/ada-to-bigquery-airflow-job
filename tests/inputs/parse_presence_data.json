@@ -1,0 +1,7 @@
+{
+    "_type": "presence",
+    "body": "example_text",
+    "event": "example_text",
+    "has_variables": "example_text",
+    "reviewable_message": "example_text"
+}

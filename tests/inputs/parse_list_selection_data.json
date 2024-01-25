@@ -1,0 +1,12 @@
+{
+    "_type": "list_selection",
+    "body": "example_text",
+    "by": "example_text",
+    "created": "example_text",
+    "data": "example_text",
+    "external_chat_id": "example_text",
+    "platform": "example_text",
+    "reviewable_message": "example_text",
+    "temp_message_uuid": "example_text",
+    "to": "example_text"
+}
